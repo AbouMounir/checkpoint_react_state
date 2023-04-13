@@ -26,6 +26,7 @@ class App extends React.Component {
     } else {
       this.setState({shows : true})
     }
+    this.setState({count : 0}) ;
   }
 
   componentDidMount() {
@@ -38,8 +39,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <button type='button' onClick={this.handleClick}> Show my profile's </button>
-        <> {this.state.shows ? <Profile fullName={this.state.fullName} profession={this.state.profession} bio={this.state.bio}> <img src={profile} alt="Nahoua.jpg"/> </Profile> : <p> You can't see my profile's</p>} </>
-        <div> Time interval : {this.state.count} </div>
+        <div> {this.state.shows ? <Profile fullName={this.state.fullName} profession={this.state.profession} bio={this.state.bio}> <img src={profile} alt="Nahoua.jpg"/> </Profile> : <div className='notProfile'> You can't see my profile's</div>} </div>
+        <div className='time'> Time interval : {this.state.count} </div>
       </div>
     );
   }

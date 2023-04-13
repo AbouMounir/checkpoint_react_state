@@ -29,3 +29,19 @@ img{
   background-color : red;
   
 }
+
+.notProfile{
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%,-50%);
+  height: 50px;
+  background-color: red;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.time{
+  position: relative;
+  top: 80vh;
+}
